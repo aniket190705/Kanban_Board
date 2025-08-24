@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server, {
     cors: {
-        origin: "http://localhost:5173", // ✅ Frontend URL
+        origin: ["http://localhost:5173", "https://kanban-board-tau-nine.vercel.app"], // ✅ Frontend URL
         methods: ["GET", "POST", "PATCH", "DELETE"],
         credentials: true,
     },
