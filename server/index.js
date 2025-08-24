@@ -26,7 +26,7 @@ mongoose
 
 // 🔧 Middleware
 app.use(cors({
-    origin: ["http://localhost:5173", "https://kanban-board-tau-nine.vercel.app"], // 🔐 Restrict to frontend origin
+    origin: ["http://localhost:5173", "https://kanban-board-tau-nine.vercel.app/"], // 🔐 Restrict to frontend origin
     credentials: true,
 }));
 app.use(express.json());
