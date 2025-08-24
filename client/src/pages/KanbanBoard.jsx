@@ -31,7 +31,7 @@ function KanbanBoard() {
     };
 
     fetchInitialTasks();
-    socket.current = io("http://localhost:5000");
+    socket.current = io("https://kanban-board-jlwg.onrender.com");
     socket.current.emit("joinBoard", boardId);
     const storedUser = localStorage.getItem("user");
     if (storedUser) {
