@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import API from "../services/api";
 function Register() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -23,10 +23,7 @@ function Register() {
     setError("");
 
     try {
-      const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
-        formData
-      );
+      const res = await API.post("/auth/register", formData);
 
       if (res.status === 201) {
         alert("Registration successful!");

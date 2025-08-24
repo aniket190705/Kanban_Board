@@ -19,7 +19,7 @@ function ActivityTimeline({ boardId }) {
   useEffect(() => {
     fetchActivities(); // Initial load
 
-    socketRef.current = io("http://localhost:5000");
+    socketRef.current = io("https://kanban-board-jlwg.onrender.com");
     socketRef.current.emit("joinBoard", boardId);
 
     socketRef.current.on("activityLogged", (newActivity) => {
